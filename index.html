@@ -1,0 +1,191 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="">
+
+    <title>Blog</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+    <link href="css/carousel.css" rel="stylesheet">
+    <script src="dist/js/jquery-3.2.1.min.js"></script>
+		<script>
+		$(document).ready(function(){
+
+			$(window).scroll(function(){
+				var scroll_top = $(window).scrollTop();
+if (scroll_top > '50') {
+
+	$('#nav').addClass("transparent");
+	$('#fore-header').removeClass("hidden");
+
+} else {
+	$('#nav').removeClass("fixed-top");
+  $('#nav').removeClass("transparent");
+$('#nav').addClass("sp-transparent");
+$('#fore-header').addClass("hidden");
+
+}
+});
+$("#links").click(function(){
+  $("#links").addClass("disabled");
+});
+$("#result").click(function(){
+  $("#result").addClass("disabled");
+});
+$("#searchword").keyup(function(){
+          var name=$("#searchword").val();
+          $.post("functions/search.php", {
+             suggestion: name
+          }, function(data, status){
+              $("#search-results").html(data);
+          });
+        });
+		});
+		</script>
+<style>
+
+</style>
+
+  </head>
+<body>
+<div class="cover">
+<div class="banner">
+  <nav class="navbar navbar-expand-lg theme" id="nav">
+          <span id="brand"><a  class="navbar-brand" href="#"> <i style="color:ghostwhite" class="fa fa-bk"><img src="images/icons/main-icon.png" width="52"></i></span></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+            <span style="color:white" class="fa fa-list"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarsExample09">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link current" href="#"><i class="fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+								<span id="current">
+								<a class="nav-link" href="#" id="search" data-toggle="modal" data-target="#search-area"><i class="fa fa-folder-open"></i> Explore</a>
+							</span>
+
+              </li>
+							<li class="nav-item active">
+								<span id="current">
+								<a class="nav-link" href="#" id="search" data-toggle="modal" data-target="#search-area"><i class="fa fa-search"></i> Finder</a>
+							</span>
+
+              </li>
+            </ul>
+
+						<button id="log-in" class="btn btn-outline-primary btn-sm" type="submit">
+							<i class="fa fa-user"></i> Log in
+						</button>
+          </div>
+        </nav>
+
+				<br>
+    <main role="main" class="container-fluid">
+
+<div class="row">
+  <div class="col-sm-6">
+<h1>Fusion</h1>
+<p class="lead"> The best elearning material provider, people often come come to fusion to learn, find tutors and study partners,electronic books, university enrollments, job opportunities e.t.c </p>
+</div>
+<div class="col-sm-6">
+</div>
+</div>
+			       </div>
+           </div>
+			</div>
+
+<div class="container padding-10px">
+<div id="main">
+	<div class="jumbotron">
+		<h1 class="text-center">👋 Welcome to Fusion!</h1>
+		<p class="lead">Fusion is an E-learning website created so as to reduce the cost of education and aquiring knowledge.</p>
+<div class="container">
+
+      <h1 class="text-center"><img class="img-figure" src="images/slider/explore-education-learing-online-business-concept-template-web-banner-copy-space-vector-illustration-explore-education-107647612.jpg" width="50%"></h1>
+
+</div>
+		<p class="lead">Fusion acts as an online resource center where you can find all the educative materials you need from books, video tutorials, lecture notes e.t.c. On Fusion you
+		can communicate, interact and learn from both local and international teachers and if you are a teacher you can open your own class, in addition Book World also gives you the
+		prvillege to prepare online tets for you students.</p>
+		<p class="lead">By using Fusion you will also be recieving updates on the latest University and College enrollments, scholarships and busaries, job enrollments and also recomend the
+		best schools you can attend according to your country and region.</p>
+		<p class="lead">Fusion gives you the oppotunity to discuss and interact with fellow students and teachers with simillar interests or simillar fields.</p>
+		<p class="lead">Book worm also gives you the opportunity to write and publish books and pamphlet online and also offers storage space for your documents, later you can download or publish your books and pamphlets
+		 at your own time</p>
+		 <p class="lead">All the books, tutorials you need is here on Fusion for FREE! All the educational material there is can be accessed througn your smart phone or your computer!</p>
+		 <div class="container">
+			 <a href="#" class="btn btn-lg btn-block btn-danger" id="links">Join</a>
+		 </div>
+	</div>
+</div>
+</div>
+
+<div class="contaner-fluid">
+	<div id="footer">
+		<div class="jumbotron">
+			<div class="row">
+				<div class="col-sm-4">
+					<span class="text-muted">Most asked questions <i class="fa fa-question"></i></span>
+				</div>
+				<div class="col-sm-4">
+					<span class="text-muted">Contact Us at bookworm@gmail.com or at bookworm@yahoo.com <i class="fa fa-envelope"></i></span>
+				</div>
+				<div class="col-sm-4">
+					<a href="#"><span class="text-muted">Log in <i class="fa fa-sign-in"></i></span></a>
+
+				</div>
+			</div>
+			<div class="container">
+			<div class="footer-text">
+				<span class="text-center text-muted">Copyright 2018. Created by Isanzi tech</span>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+<div id="search-area" class="modal fade" role="dialog">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+
+      <div class="search-area container">
+        <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fa fa-search"></i></span>
+                  </div>
+                  <input type="text" id="searchword" class="form-control" placeholder="Search..." required autocomplete="off">
+
+                </div>
+      </div>
+    </div>
+    <div class="modal-body">
+  search results
+  <hr>
+  <div id="search-results">
+  </div>
+    </div>
+
+  </div>
+
+</div>
+  </div>
+
+</main>
+
+    <script src="dist/js/jquery-3.2.1.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="dist/js/holder.min.js"></script>
+    <script src="dist/js/popper.min.js"></script>
+
+  </body>
+</html>

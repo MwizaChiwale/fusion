@@ -1,0 +1,127 @@
+
+.banner{
+  background: url(../images/slider/slider1.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  height: 600px;
+  color: white;
+}
+#container{
+  max-width:300px;
+}
+.headers{
+  background: ;
+  display: block;
+  text-align: center;
+  color:white;
+  margin-bottom: 0px;
+  padding: 4px;
+
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+#text{
+  margin-bottom: 5px;
+  color: ghostwhite;
+}
+.theme{
+  background: #040b29;
+
+}
+.theme .nav-item{
+  color: ghostwhite;
+}
+.theme .nav-link{
+  color: ghostwhite;
+  font-size: 15px;
+}
+.theme .nav-link:hover{
+  color: dodgerblue;
+  transition: 20;
+}
+#main .lead::selection{
+  background:navy;
+  color: ghostwhite;
+  font-weight: bold;
+}
+#main h1::selection{
+  background:navy;
+  color: ghostwhite;
+}
+.theme .nav-item .current{
+  color:dodgerblue;
+  display: block;
+
+}
+.dropdown-menu{
+  font-size: 12px;
+}
+#carousel{
+
+
+  max-width: 100px;
+  min-width: 100%;
+  background: #ccc;
+}
+#main{
+
+  min-height: 400px;
+  max-width: 100px;
+  min-width: 100%;
+  border-radius: 5px;
+  background-color: ghostwhite;
+}
+#main .jumbotron{
+
+  min-height: 400px;
+  max-width: 100px;
+  min-width: 100%;
+  border-radius: 5px;
+    background-color: white;
+}
+.padding-10px{
+  padding: 20px;
+}
+#footer{
+
+
+  max-width: 100px;
+  min-width: 100%;
+
+}
+
+.hidden{
+  display: none;
+}
+.show{
+  display: block;
+}
+.search-bar{
+  display: none;
+}
+.sp-transparent{
+  opacity: 0.7;
+}
+.transparent{
+  opacity: 0.8;
+}
+.footer-text{
+  text-align: center;
+  margin-top: 12px;
+}
+#search-results{
+  max-height: 300px;
+  overflow-x: scroll;
+}
+#search-area{
+  opacity: 10;
+  min-height: 100px;
+}
+@media (max-width: 420px) {
+h1{
+font-size: 28px;
+}
+#main .lead{
+  font-size: 21px;
+}
+}
